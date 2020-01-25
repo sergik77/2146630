@@ -1,0 +1,39 @@
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="12px" height="14px">
+    <defs>
+        <filter filterUnits="userSpaceOnUse" id="Filter_0" x="0px" y="0px" width="12px" height="14px"  >
+            <feOffset in="SourceAlpha" dx="0" dy="1" />
+            <feGaussianBlur result="blurOut" stdDeviation="0" />
+            <feFlood flood-color="rgb(255, 255, 255)" result="floodOut" />
+            <feComposite operator="atop" in="floodOut" in2="blurOut" />
+            <feComponentTransfer><feFuncA type="linear" slope="0.9"/></feComponentTransfer>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <filter id="Filter_1">
+            <feOffset in="SourceAlpha" dx="0" dy="-1" />
+            <feGaussianBlur result="blurOut" stdDeviation="0" />
+            <feFlood flood-color="rgb(0, 0, 0)" result="floodOut" />
+            <feComposite operator="out" in="floodOut" in2="blurOut" result="compOut" />
+            <feComposite operator="in" in="compOut" in2="SourceAlpha" />
+            <feComponentTransfer><feFuncA type="linear" slope="0.3"/></feComponentTransfer>
+            <feBlend mode="multiply" in2="SourceGraphic" />
+        </filter>
+        <filter id="Filter_2">
+            <feFlood flood-color="rgb(115, 180, 213)" flood-opacity="1" result="floodOut" />
+            <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+            <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+        </filter>
+
+    </defs>
+    <g filter="url(#Filter_0)">
+        <g filter="url(#Filter_1)">
+            <g filter="url(#Filter_2)">
+                <path fill-rule="evenodd"  fill="rgb(51, 51, 51)"
+                      d="M6.029,12.661 L6.029,12.726 C6.029,12.726 6.006,12.705 5.994,12.694 C5.982,12.705 5.959,12.726 5.959,12.726 L5.959,12.661 C5.287,12.036 -0.022,7.031 -0.000,4.963 C0.023,2.756 1.427,1.957 3.024,1.981 C4.583,2.004 5.931,3.384 5.994,3.448 C6.057,3.384 7.405,2.004 8.964,1.981 C10.561,1.957 11.965,2.756 11.988,4.963 C12.010,7.031 6.701,12.036 6.029,12.661 Z"/>
+            </g></g></g>
+</svg>
